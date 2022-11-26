@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">RetrofitFileUploadProgress</string>
+    <string name="main_app_name">Write_</string>
+    <string name="github_redeyesncode">Github : RedEyesNCode \n All this For 4 Hearts \n ❤ ❤ ❤ ❤ </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="note_date">02 October, 2021</string>
+    <string name="the_heart_of_a_coder">The Heart of a coder</string>
+    <string name="note_pages">4 Pages</string>
+    <string name="search">Search</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="title">Note Title</string>
+    <string name="comming_soon">Comming_Soon !</string>
+    <string name="add_new_note">Add New Note</string>
+    <string name="enter_note_description">Enter Note Description</string>
+    <string name="enter_title">Enter Title</string>
+    <string name="github_link">https://github.com/RedEyesNCode</string>
+</resources>

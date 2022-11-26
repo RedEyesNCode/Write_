@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:id="@+id/mainLayout"
+        android:background="@color/grey_card"
+        app:cardBackgroundColor="@color/grey_card"
+        app:cardElevation="@dimen/_5sdp"
+        app:cardCornerRadius="@dimen/_11sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_height="@dimen/_165sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvNoteDate"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/grey_black"
+            android:textSize="@dimen/_11sdp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/note_date"
+            android:fontFamily="@font/ibmplexmono_light"
+            android:layout_alignParentTop="true"
+            android:layout_height="wrap_content"/>
+        <ImageView
+            android:layout_width="@dimen/_35sdp"
+            android:visibility="gone"
+            android:src="@drawable/delete"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/btnDeleteNote"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_height="@dimen/_35sdp"/>
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:fontFamily="@font/ibmplexmono_semibold"
+            android:lines="2"
+            android:text="@string/the_heart_of_a_coder"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_16sdp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tvNotePages"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:textColor="@color/grey_black"
+            android:textSize="@dimen/_11sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/_8sdp"
+            android:layout_alignParentBottom="true"
+            android:text="@string/note_pages"
+            android:fontFamily="@font/ibmplexmono_light"
+            android:layout_height="wrap_content"/>
+
+
+
+    </RelativeLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+
+
+</LinearLayout>

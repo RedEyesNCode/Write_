@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/documentFragment"
+        android:enabled="true"
+        android:title="Documents"
+        android:icon="@drawable/folder"/>
+    <item
+        android:id="@+id/readerFragment"
+        android:enabled="true"
+        android:icon="@drawable/book"
+        android:title="Reader Mode"/>
+    <item
+        android:id="@+id/settingsFragment"
+        android:enabled="true"
+        android:icon="@drawable/setting"
+        android:title="Settings"/>
+</menu>
