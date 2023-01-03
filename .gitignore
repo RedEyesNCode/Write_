@@ -13,4 +13,4 @@
 .externalNativeBuild
 .cxx
 local.properties
-/app/src/main/java/com/redeyesncode/write/retrofit/
+/app/src/main/java/com/redeyesncode/write/retrofit/ApiService.kt
