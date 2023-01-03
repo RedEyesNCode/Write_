@@ -25,9 +25,6 @@ class SplashActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         // Starting the handler for the basic activity now.
-
-
-
         Handler().postDelayed({
             var intentDashboard = Intent(this@SplashActivity,DashboardActivity::class.java )
             intentDashboard.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK

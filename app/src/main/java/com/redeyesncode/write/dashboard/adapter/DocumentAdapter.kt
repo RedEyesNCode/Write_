@@ -7,10 +7,10 @@ import androidx.recyclerview.widget.RecyclerView
 import com.redeyesncode.write.databinding.NoteCardBinding
 import com.redeyesncode.write.notedatabase.NoteDetailTable
 
-class DocumentAdapter(var context:Context,var documents:List<NoteDetailTable>):RecyclerView.Adapter<DocumentAdapter.MyViewHolder>() {
+class DocumentAdapter(var context:Context,var documents:List<NoteDetailTable>, var onClickAdapter: onClick):RecyclerView.Adapter<DocumentAdapter.MyViewHolder>() {
 
     private lateinit var binding:NoteCardBinding
-//    private var onClickDocument = onDocumentClick
+    private var onClickDocument = onClickAdapter
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -34,12 +34,12 @@ class DocumentAdapter(var context:Context,var documents:List<NoteDetailTable>):R
 
         // This Card Does not have any content.
 
-//        holder.cardBinding.mainLayout.setOnClickListener {
-//            onClickDocument.onViewNote(noteDetailTable)
-//        }
-//        holder.cardBinding.btnDeleteNote.setOnClickListener {
-//            onClickDocument.onDeleteClick(position,noteDetailTable)
-//        }
+        holder.cardBinding.mainLayout.setOnClickListener {
+            onClickDocument.onViewNote(noteDetailTable)
+        }
+        holder.cardBinding.btnDeleteNote.setOnClickListener {
+            onClickDocument.onDeleteClick(position,noteDetailTable)
+        }
 
 
     }

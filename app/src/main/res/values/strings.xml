@@ -16,4 +16,5 @@
     <string name="enter_note_description">Enter Note Description</string>
     <string name="enter_title">Enter Title</string>
     <string name="github_link">https://github.com/RedEyesNCode</string>
+    <string name="view_books">View Books</string>
 </resources>

@@ -15,6 +15,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.redeyesncode.write.R
 import com.redeyesncode.write.dashboard.adapter.DocumentAdapter
 import com.redeyesncode.write.dashboard.createnote.CreateNoteActivity
+import com.redeyesncode.write.dashboard.viewnote.ViewNoteActivity
 import com.redeyesncode.write.databinding.FragmentDocumentsBinding
 import com.redeyesncode.write.notedatabase.AppDatabase
 import com.redeyesncode.write.notedatabase.NoteDetailTable
@@ -77,7 +78,7 @@ class DocumentsFragment : Fragment() , DocumentAdapter.onClick {
     ): View? {
         binding = FragmentDocumentsBinding.inflate(layoutInflater,container,false);
         onDocumentAdapterClick = this
-       documentAdapter = DocumentAdapter(fragmentContext,documents)
+       documentAdapter = DocumentAdapter(fragmentContext,documents,this)
         initClicks()
 
         return binding.root
@@ -89,8 +90,10 @@ class DocumentsFragment : Fragment() , DocumentAdapter.onClick {
 
 
     override fun onViewNote(noteDetailTable: NoteDetailTable) {
+        var viewNoteIntent = Intent(fragmentContext,ViewNoteActivity::class.java)
+        viewNoteIntent.putExtra("NOTE_ID",noteDetailTable.note_id)
+        startActivity(viewNoteIntent)
 
-        Snackbar.make(binding.root,"View Note Screen is remaining !", Snackbar.LENGTH_LONG).show()
 
     }
     private fun deleteNote(noteDetailTable: NoteDetailTable) {
@@ -113,12 +116,13 @@ class DocumentsFragment : Fragment() , DocumentAdapter.onClick {
 
             launch (Dispatchers.Main){
                 binding.recvNoteCards.layoutManager = GridLayoutManager(fragmentContext,2)
-                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents)
+                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents,this@DocumentsFragment)
 
             }
 
         }
         Snackbar.make(binding.root,"Deleted Note Successfully !", Snackbar.LENGTH_LONG).show()
+        updateNotesAdapter()
 
     }
 
@@ -142,7 +146,7 @@ class DocumentsFragment : Fragment() , DocumentAdapter.onClick {
 
             launch (Dispatchers.Main){
                 binding.recvNoteCards.layoutManager = GridLayoutManager(fragmentContext,2)
-                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents)
+                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents,this@DocumentsFragment)
 
                 if(documents.isEmpty()){
                     binding.recvNoteCards.visibility = View.GONE

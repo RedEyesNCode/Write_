@@ -82,7 +82,7 @@ class ReaderFragment : Fragment(), DocumentAdapter.onClick {
 
             launch (Dispatchers.Main){
                 binding.recvNoteCards.layoutManager = GridLayoutManager(fragmentContext,2)
-                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents)
+                binding.recvNoteCards.adapter = DocumentAdapter(fragmentContext,documents,this@ReaderFragment)
                 if(documents.isEmpty()){
                     binding.recvNoteCards.visibility = View.GONE
                     binding.tvNoNotes.visibility=View.VISIBLE

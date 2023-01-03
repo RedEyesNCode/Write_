@@ -9,6 +9,10 @@ interface NoteDetailsDao {
     @Query("SELECT * FROM note_detail")
     fun getAllNotes(): List<NoteDetailTable>
 
+    //Query for getting the specific note details
+    @Query("SELECT * FROM note_detail WHERE note_id=:id")
+    fun getNoteById(id:Int) :NoteDetailTable
+
 
     // Query for inserting th notes in into the table.
     @Insert
