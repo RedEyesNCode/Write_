@@ -10,8 +10,6 @@ import retrofit2.http.GET
 interface ApiService {
 
 
- // WORTH_NOTHING.
-
 
 
 }

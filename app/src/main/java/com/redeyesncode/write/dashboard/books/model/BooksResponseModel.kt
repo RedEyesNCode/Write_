@@ -17,7 +17,7 @@ data class BooksResponseModel(@SerializedName("status"  ) var status  : String? 
         @SerializedName("numberOfPages"  ) var numberOfPages  : String?           = null,
         @SerializedName("bookUrl"        ) var bookUrl        : String?           = null,
         @SerializedName("bookCoverImage" ) var bookCoverImage : String?           = null,
+        @SerializedName("categoryName" ) var categoryName : String?           = null,
         @SerializedName("topics"         ) var topics         : ArrayList<String> = arrayListOf()
-
     )
 }

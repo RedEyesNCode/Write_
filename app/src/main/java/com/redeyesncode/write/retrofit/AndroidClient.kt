@@ -7,7 +7,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class AndroidClient {
-    val BASE_URL = "http:// YOU ARE REALLY CURIOUS ABOUT ME ! :3577/"
+    val BASE_URL = "http://43.205.18.211:3577/"
 
 
     val retrofitClient: Retrofit.Builder by lazy {
