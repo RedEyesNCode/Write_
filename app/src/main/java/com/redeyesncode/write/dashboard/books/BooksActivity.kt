@@ -24,7 +24,7 @@ class BooksActivity : BaseActivity(), BooksAdapter.onBookAdapterClick {
 
         setupViewModel()
         attachObservers()
-        initialApiCall()
+//        initialApiCall()
     }
 
     private fun setupViewModel() {
@@ -33,9 +33,9 @@ class BooksActivity : BaseActivity(), BooksAdapter.onBookAdapterClick {
         binding.viewmodel = bookViewModel
     }
 
-    private fun initialApiCall() {
-        bookViewModel.getAllBooks()
-    }
+//    private fun initialApiCall() {
+//        bookViewModel.getAllBooks()
+//    }
 
     private fun attachObservers() {
 

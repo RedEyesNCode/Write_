@@ -10,7 +10,7 @@ import androidx.room.RoomDatabase
 
 
 
-@Database(entities = arrayOf(NoteDetailTable::class), version = 2)
+@Database(entities = [NoteDetailTable::class], version = 2, exportSchema = false)
 public abstract class AppDatabase :RoomDatabase(){
 
     // Make that much abstract function = number of interfaces.

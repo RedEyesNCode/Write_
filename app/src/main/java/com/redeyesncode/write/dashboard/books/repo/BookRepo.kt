@@ -4,7 +4,7 @@ import com.redeyesncode.write.retrofit.AndroidClient
 
 class BookRepo {
 
-    suspend fun getAllBooksCoroutine() = AndroidClient().apiInterface.getAllBooks()
+//    suspend fun getAllBooksCoroutine() = AndroidClient().apiInterface.getAllBooks()
 
 
 }
